@@ -1,6 +1,6 @@
 ## Team-179-Frontend farmers crowdfunding app codebase.
 
-Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposure to collectively raise capital through investors.
+Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposure to collectively raise capital for farmers through investors.
 
 **The general page breakdown looks like this:**
 
