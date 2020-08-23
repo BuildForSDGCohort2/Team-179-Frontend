@@ -4,18 +4,18 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
 
 **The general page breakdown looks like this:**
 
-- Home page (URL: /#/ )
+-  Home page (URL: /#/ )
+  -  List of tags (ie melon, onions, avocado)
+  -  List of crowdfunding request posts from the farmers
+  -  Pagination for list of crowdfunding request posts
 
-  - List of tags (ie melon, onions, avocado)
-  - List of crowdfunding request posts from the farmers
-  - Pagination for list of crowdfunding request posts
+-  Sign in/Sign up pages (URL: /#/login, /#/register )
 
-- Sign in/Sign up pages (URL: /#/login, /#/register )
+  -  Uses JWT or anything else.
+  -  Authentication
 
-  - Uses JWT or anything else.
-  - Authentication
+-  Settings page (URL: /#/settings )
 
-- Settings page (URL: /#/settings )
 - Dashboad (URL: /#/dashboard )
 
   - List of fundrising posts populated created by the farmer.
