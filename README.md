@@ -29,7 +29,7 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
     -   Single post display on the client side
     -   Comments section at bottom of page
     -   Delete comment button (only shown to comment's author)
-    
+
 -   Profile page (URL: /#/profile/:username, /#/profile/:investors-username/favorites )
     -   Show basic investor or farmer info and verification docs
     -   Funded amount for farmer or investor
