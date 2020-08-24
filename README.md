@@ -1,6 +1,10 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/86f6d693fe9e4dc8b334822ca5af50c1)](https://app.codacy.com/gh/BuildForSDGCohort2/Team-179-Frontend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/Team-179-Frontend&utm_campaign=Badge_Grade_Settings)
+
 # Team-179-Frontend farmers crowdfunding app codebase
 
 Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposure to collectively raise capital for farmers through investors.
+
+## Features
 
 **The general page breakdown looks like this:**
 -   Home page (URL: /#/ )
@@ -25,6 +29,4 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
     -   Funded amount for farmer or investor
 
 <br />
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/86f6d693fe9e4dc8b334822ca5af50c1)](https://app.codacy.com/gh/BuildForSDGCohort2/Team-179-Frontend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/Team-179-Frontend&utm_campaign=Badge_Grade_Settings)
 
