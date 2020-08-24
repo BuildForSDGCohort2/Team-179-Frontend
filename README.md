@@ -11,19 +11,25 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
     -   List of tags (ie melon, onions, avocado)
     -   List of crowdfunding request posts from the farmers
     -   Pagination for list of crowdfunding request posts
+
 -   Sign in/Sign up pages (URL: /#/login, /#/register )
     -   Uses JWT or anything else.
     -   Authentication
+
 -   Settings page (URL: /#/settings )
+
 -   Dashboad (URL: /#/dashboard )
     -   List of fundrising posts populated created by the farmer.
     -   Investors favorited crowdfunding posts
+
 -   Editor page to create/edit crowdfunding request posts (URL: /#/editor, /#/editor/post-slug-here)
+
 -   Post page (URL: /#/post/post-slug-here )
     -   Delete post button (only shown to post author)
     -   Single post display on the client side
     -   Comments section at bottom of page
     -   Delete comment button (only shown to comment's author)
+    
 -   Profile page (URL: /#/profile/:username, /#/profile/:investors-username/favorites )
     -   Show basic investor or farmer info and verification docs
     -   Funded amount for farmer or investor
