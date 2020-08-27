@@ -30,7 +30,7 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
     -   Comments section at bottom of page
     -   Delete comment button (only shown to comment's author)
 
--   Profile page [`Profile`](`https://agri-vesty.netlify.app/#/profile/:username, /#/profile/:investors-username/favorites` )
+-   Profile page \[`Profile`](`https://agri-vesty.netlify.app/#/profile/:username, /#/profile/:investors-username/favorites` )
     -   Show basic investor or farmer info and verification docs
     -   Funded amount for farmer or investor
 
