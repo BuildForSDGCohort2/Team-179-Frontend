@@ -7,7 +7,7 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
 ## Features
 
 **The general page breakdown looks like this:**
--   Home page ([URL:] https://agri-vesty.netlify.app/#/ )
+-   Home page [Home](https://agri-vesty.netlify.app/#/ )
     -   List of tags (ie melon, onions, avocado)
     -   List of crowdfunding request posts from the farmers
     -   Pagination for list of crowdfunding request posts
@@ -16,7 +16,7 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
     -   Uses JWT or anything else.
     -   Authentication
 
--   Settings page ([URL:]https://agri-vesty.netlify.app/#/settings )
+-   Settings page [Settings](https://agri-vesty.netlify.app/#/settings )
 
 -   Dashboad (URL: /#/dashboard )
     -   List of fundrising posts populated created by the farmer.
@@ -24,13 +24,13 @@ Agri-fund, Agri-loop, Agri-vesty leverages networks for greater reach and exposu
 
 -   Editor page to create/edit crowdfunding request posts (URL: /#/editor, /#/editor/post-slug-here)
 
--   Post page ([URL:]https://agri-vesty.netlify.app/#/post/post-slug-here )
+-   Post page [Post](https://agri-vesty.netlify.app/#/post/post-slug-here )
     -   Delete post button (only shown to post author)
     -   Single post display on the client side
     -   Comments section at bottom of page
     -   Delete comment button (only shown to comment's author)
 
--   Profile page ([URL:]https://agri-vesty.netlify.app/#/profile/:username, /#/profile/:investors-username/favorites )
+-   Profile page [Profile](https://agri-vesty.netlify.app/#/profile/:username, /#/profile/:investors-username/favorites )
     -   Show basic investor or farmer info and verification docs
     -   Funded amount for farmer or investor
 
