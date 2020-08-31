@@ -1,0 +1,1 @@
+To contribute to this app, please check src/App.js and the folder src/component/pages.
