@@ -6,31 +6,34 @@ import { Button } from './Button'
 // import About from "About";
 // import Home from "Home";
 // import Produce from "Produce";
-function Navbar(){
+function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-
+  
     const handleClick = () => setClick(!click);
-    const closedMobileMenu = () => setClick(false);
-
+    const closeMobileMenu = () => setClick(false);
+  
     const showButton = () => {
-        if (window.innerwidth <= 960){
-            setButton(false)
-        }
-        else {
-            setButton(true);
-        }
-    }
+      if (window.innerWidth <= 960) {
+        setButton(false);
+      } else {
+        setButton(true);
+      }
+    };
+  
     useEffect(() => {
-        showButton();
-      }, []);
+      showButton();
+    }, []);
+  
+    window.addEventListener('resize', showButton);
 
     window.addEventListener('resize', showButton);
+
     return (
         <>
         <nav className='navbar'>
         <div className='navbar-container'>
-        <Link to ='/' className='navbar-logo' onClick={closedMobileMenu}>
+        <Link to ='/' className='navbar-logo' onClick={closeMobileMenu}>
         Agrivesty
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -40,35 +43,35 @@ function Navbar(){
         <li className='nav-item'>
         <Link to='/'
         className='nav-links'
-        onClick={ closedMobileMenu }>
+        onClick={ closeMobileMenu }>
                         Home
                     </Link>
                     </li>
                     <li className='nav-item'>
                     <Link to='/user'
                     className='nav-links'
-                    onClick={ closedMobileMenu }>
+                    onClick={ closeMobileMenu }>
                         User
                     </Link>
                     </li>
                     <li className='nav-item'>
                     <Link to='/about'
                     className='nav-links'
-                    onClick={ closedMobileMenu }>
+                    onClick={ closeMobileMenu }>
                         About
                     </Link>
                     </li>
                     <li className='nav-item'>
                     <Link to='/Produce'
                     className='nav-links'
-                    onClick={ closedMobileMenu }>
+                    onClick={ closeMobileMenu }>
                         Produce
                     </Link>
                     </li>
                     <li>
                     <Link to='/Produce'
                     className='nav-links-mobile'
-                    onClick={ closedMobileMenu }>
+                    onClick={ closeMobileMenu }>
                         signup
                     </Link>
                     </li>
