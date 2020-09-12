@@ -4,11 +4,11 @@ import {Route, Redirect, Switch, Link} from 'react-router-dom'
 import User from "./component/pages/User";
 import About from "./component/pages/About";
 import Home from "./component/pages/Home";
-
+import './scss/main.scss'
 class App extends Component {
   render() {
     return (
-        <div>
+        <div className="container-fluid">
             <React.Fragment>
                 <nav>
                     <Link to="/">
@@ -21,6 +21,7 @@ class App extends Component {
                     <Link to="/about">
                         About
                     </Link>
+
                 </nav>
 
                 <Switch>
