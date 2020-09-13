@@ -1,0 +1,69 @@
+
+@import "variables";
+@import "~bootstrap/scss/bootstrap"; /** TODO.. drop bootstrap!*/
+* {
+  margin: 0;
+  font-family: Radley, Questial, serif;
+}
+
+button {
+  background-color: map-get($colors, pr_green);
+  color: map-get($colors, primary_white);
+  font-size: 50px;
+  line-height: 51px;
+  font-family: Questrial;
+
+  a {
+    color: map-get($colors, primary_white);
+  }
+}
+.hm-pg {
+
+  position: relative;
+
+  .pg-img {
+    min-height: 90vh;
+    width: 100%;
+    background: #2e362d;
+  }
+
+  .intro {
+    position: absolute;
+    bottom: 7vh;
+    right: 5%;
+    display: grid;
+
+    span {
+      color: map-get($colors, primary_white);
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  }
+}
+
+.user-forms {
+  padding: 4em 2em 2em 3em;
+  text-align: center;
+  box-shadow: -6px 4px 21px -1px #d6ced6;
+  //position: absolute;
+  width: 575px;
+  height: 728px;
+  left: 375px;
+  top: 202px;
+}
+
+.user-options {
+
+  a {
+    padding-left: .7em;
+  }
+
+  .another-option {
+    font-weight: bold;
+  }
+}
+
+.user-page {
+  display: grid;
+  justify-content: center;
+}
