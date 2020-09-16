@@ -4,10 +4,6 @@ import {Link} from "react-router-dom";
 class Produce extends Component {
     render() {
         return (
-<<<<<<< HEAD:src/components/pages/Produce.js
-            <div>
-                <h1> Welcome to the Produce!!!</h1>
-=======
             <div className="content hm-pg">
                 <section className="pg-img">
                     Image!!!
@@ -22,7 +18,6 @@ class Produce extends Component {
                         </Link>
                     </button>
                 </div>
->>>>>>> 99d80b34fc68b93a1b71ffc59865978ee654ddfd:src/component/pages/Home.js
             </div>
         );
     }
