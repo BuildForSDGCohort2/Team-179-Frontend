@@ -1,5 +1,6 @@
 import React from 'react'
 import CardTextItem from './CardTextItem'
+import CardImgItem from './CardImgItem'
 import './Cards.css';
 
 function cards() {
@@ -10,7 +11,7 @@ function cards() {
          <div className='cards__wrapper'>
          <ul className='cards__items'>
          <CardTextItem />
-         <CardTextItem />
+         <CardImgItem />
          </ul>  
          </div>
         </div> 

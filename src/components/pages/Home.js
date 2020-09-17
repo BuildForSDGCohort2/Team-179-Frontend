@@ -6,10 +6,10 @@ import Cards from '../Cards'
 
 function Home () {
     return (
-        <>
+        <div className='Home'>
         <HeroSection />
         <Cards />
-        </>
+        </div>
     )
 }
 // class Home extends Component {
