@@ -6,7 +6,7 @@ import Cards from '../Cards'
 
 function Home () {
     return (
-        <div className='Home'>
+        <div >
         <HeroSection />
         <Cards />
         </div>

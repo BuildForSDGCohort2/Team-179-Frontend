@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CardImgItem() {
+function CardImgItem() {
     return (
         <div>
             <li className='cards__item'>
@@ -13,3 +13,4 @@ export default function CardImgItem() {
         </div>
     )
 }
+export default CardImgItem;
