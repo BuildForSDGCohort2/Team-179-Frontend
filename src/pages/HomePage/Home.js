@@ -1,7 +1,8 @@
 import React from 'react';
 import { homeObjOne } from './Data';
-import { InfoSection } from '../../components';
-// import '../../App.css';
+import { InfoSection} from '../../components';
+import Cards from '../../components/Cards';
+import '../../App.css';
 import HeroSection from '../../components/HeroSection'
 
 
@@ -10,6 +11,7 @@ function Home () {
         < >
         <HeroSection />
         <InfoSection {...homeObjOne} />
+        <Cards />
         </>
     )
 }
