@@ -1,15 +1,16 @@
 import React from 'react';
-import '../../App.css';
-import HeroSection from '../HeroSection'
-import Cards from '../Cards'
+import { homeObjOne } from './Data';
+import { InfoSection } from '../../components';
+// import '../../App.css';
+import HeroSection from '../../components/HeroSection'
 
 
 function Home () {
     return (
-        <div >
+        < >
         <HeroSection />
-        <Cards />
-        </div>
+        <InfoSection {...homeObjOne} />
+        </>
     )
 }
 // class Home extends Component {

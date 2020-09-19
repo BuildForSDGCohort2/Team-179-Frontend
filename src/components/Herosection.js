@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
     return (
         <div className='hero-container'>
-        <img src="" alt=''/>
+        <image src="" alt='Farmer In the Farm'/>
         <h1 className='hero-text'> Be Part Of The Food Security Revolution</h1>
         <div className="hero-btns">
         <Button className='btns'

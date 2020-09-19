@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Register from "../forms/Register";
-import Login from "../forms/Login";
+import Register from "../components/forms/Register";
+import Login from "../components/forms/Login";
 
 // separated user options from form because it contains complex login page logic
 // unrelated to the main purpose of the page

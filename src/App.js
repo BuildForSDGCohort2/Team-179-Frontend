@@ -1,18 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
+import GlobalStyle from './globalStyles';
 import Navbar from "./components/Navbar";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Home from "./components/pages/Home";
+import './App.css'
+import Home from "./pages/HomePage/Home";
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import About from "./components/pages/About";
-import Produce from "./components/pages/Produce";
-import User from "./components/pages/User";
+import About from "./pages/About";
+import Produce from "./pages/Produce";
+import User from "./pages/User";
 
-class App extends Component {
-  render() {
+function App() {
     return (
         <div>
           <Router>
+          <GlobalStyle />
            <Navbar />
            <Switch>
            <Route path='/' exact component={Home}/>
@@ -23,6 +24,5 @@ class App extends Component {
           </Router>
         </div>
     );
-  }
 }
 export default App;
