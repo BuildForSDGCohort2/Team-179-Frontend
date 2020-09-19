@@ -1,22 +1,17 @@
 
 @import "variables";
-@import "~bootstrap/scss/bootstrap"; /** TODO.. drop bootstrap!*/
+@import "fresh_api";
+//@import "~bootstrap/scss/bootstrap"; /** TODO.. drop bootstrap!*/
+
+/*
 * {
   margin: 0;
   font-family: Radley, Questial, serif;
 }
 
-button {
-  background-color: map-get($colors, pr_green);
-  color: map-get($colors, primary_white);
-  font-size: 50px;
-  line-height: 51px;
-  font-family: Questrial;
+ */
 
-  a {
-    color: map-get($colors, primary_white);
-  }
-}
+/*
 .hm-pg {
 
   position: relative;
@@ -40,6 +35,8 @@ button {
     }
   }
 }
+
+*/
 
 .user-forms {
   padding: 4em 2em 2em 3em;
@@ -66,4 +63,79 @@ button {
 .user-page {
   display: grid;
   justify-content: center;
+}
+
+.adm-reports {
+
+  .content {
+    padding: 1em;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  h1 {
+    color: black;
+    //width: 145px;
+    //height: 51px;
+    //left: 204px;
+    //top: 196px;
+
+    font-family: Radley;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+
+  }
+
+  .item {
+    //position: absolute;
+    //width: 537px;
+    //height: 355px;
+    //left: 111px;
+    //top: 178px;
+    display: inline-block;
+
+    background: #E6F0EE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+
+    ul {
+
+      li {
+
+        margin: 1em;
+        list-style: none;
+        padding: 1em;
+
+        //width: 483px;
+        //height: 104px;
+        //left: 141px;
+        //top: 723px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
+#admin-nav {
+  background: #4a5f9c;
+  color: map-get($colors, primary_white);
+
+
+  .admin-toggle {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+
+  nav {
+    a {
+      color: map-get($colors, primary_white);
+      margin-left: 1em;
+      text-decoration: none;
+    }
+  }
 }
