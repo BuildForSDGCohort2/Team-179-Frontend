@@ -9,7 +9,7 @@ import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import About from "./pages/About";
 import Produce from "./pages/Produce";
 import User from "./pages/User";
-import AdminNavBar from "./components/admin/AdminNavBar";
+// import AdminNavBar from "./components/admin/AdminNavBar";
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Router>
           <GlobalStyle />
            <Navbar />
-           <AdminNavBar/>
+           {/* <AdminNavBar/> */}
            <Switch>
            <Route path='/' exact component={Home}/>
            <Route path='/About' exact component={About}/>
