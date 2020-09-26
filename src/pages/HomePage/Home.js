@@ -2,16 +2,15 @@ import React from 'react';
 import { homeObjOne } from './Data';
 import { InfoSection } from '../../components';
 // import '../../App.css';
-import HeroSection from '../../components/HeroSection'
+import HeroSection from '../../components/HeroSection';
 
-
-function Home () {
-    return (
-        < >
-        <HeroSection />
-        <InfoSection {...homeObjOne} />
-        </>
-    )
+function Home() {
+  return (
+    < >
+      <HeroSection />
+      <InfoSection {...homeObjOne} />
+    </>
+  );
 }
 // class Home extends Component {
 //     render() {
