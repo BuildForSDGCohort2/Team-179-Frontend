@@ -22,6 +22,7 @@ const Register = () => {
                 <Field name="id_number" type="number" placeholder="ID Number">ID Number</Field>
                 <Field name="phone_number" type="number" placeholder="Phone Number">Phone Number</Field>
                 <Field name="password" type="password" placeholder="password">Password</Field>
+                <button type='submit' className='btn'>Register</button>
             </Form>
         </div>
     );

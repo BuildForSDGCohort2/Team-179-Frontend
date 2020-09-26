@@ -1,24 +1,26 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import Cards from '../components/Cards';
 
 class Produce extends Component {
     render() {
         return (
-            <div className="content hm-pg">
-                <section className="pg-img">
-                    Image!!!
-                </section>
-                <div className="intro">
-                    <span>
-                        Be Part Of The revolution Off food security
-                    </span>
-                    <button>
-                        <Link to="/user">
-                            Join Us
-                        </Link>
-                    </button>
-                </div>
-            </div>
+            // <div className="content hm-pg">
+            //     <section className="pg-img">
+            //         Image!!!
+            //     </section>
+            //     <div className="intro">
+            //         <span>
+            //             Be Part Of The revolution Off food security
+            //         </span>
+            //         <button>
+            //             <Link to="/user">
+            //                 Join Us
+            //             </Link>
+            //         </button>
+            //     </div>
+            // </div>
+            <Cards />
         );
     }
 }
