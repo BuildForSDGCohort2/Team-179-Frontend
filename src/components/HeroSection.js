@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Button } from './Button';
+import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
@@ -11,7 +11,7 @@ function HeroSection() {
         <h1 className='hero-text'> Be Part Of The Food Security Revolution</h1>
         <div className="hero-btns">
         <Link to='/user'>
-        <Button>
+        <Button  size="large" variant="contained" color="primary">
         Join US
         </Button>
         </Link>

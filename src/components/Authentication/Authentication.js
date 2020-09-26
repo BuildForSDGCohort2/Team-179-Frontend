@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
@@ -61,30 +61,34 @@ function Authentication() {
                     </AuthCol>
                 </AuthRow>
             </AuthSec> */}
-            <Grid container spacing={2} justify='center'>
-            <Grid item xs={12} className={classes.InvestorWrapper}>
-                {/* <Paper  style ={{backgroundImage: 'url(https://ik.imagekit.io/ugyodiq15/download_XtU3_trPo.jpg)'}}> */}
+            <Grid column spacing={3} justify='center'>
+            <Grid row>
+            <Grid item column xs={12} className={classes.InvestorWrapper}>
+                
                 <div className={classes.mainFeaturedPostContent}>
                         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
                         Willing to make profits as an investor ?
                         </Typography>
-                        <Link variant="subtitle1" href="#">
+                        <Link to='/user'>
                             <Button variant="contained" color="Primary">Join Us</Button>
                         </Link>
                 </div>
-                {/* </Paper> */}
+                
             </Grid>
-            <Grid item xs={12} className={classes.FarmerWrapper}>
-                {/* <Paper  style ={{backgroundImage: 'url(https://ik.imagekit.io/ugyodiq15/farmer_DAqv07saU.jpg)'}}> */}
+            </Grid>
+            <Grid row>
+            <Grid item column xs={12} className={classes.FarmerWrapper}>
+                
                 <div className={classes.mainFeaturedPostContent}>
                         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
                         Willing to gain funding and new farming methods ?
                         </Typography>
-                        <Link variant="subtitle1" href="#">
+                        <Link to='/user'>
                         <Button variant="contained" color="Primary">Join Us</Button>
                         </Link>
                 </div>
-                {/* </Paper> */}
+                
+            </Grid>
             </Grid>
             </Grid>
         </div>
