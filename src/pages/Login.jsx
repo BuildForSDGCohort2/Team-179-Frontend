@@ -13,6 +13,7 @@ const ResetPassword = () => {
     console.log(response);
   };
 
+  // TODO:: remove repeated
   return (
     <div className="reset-password-form">
 
@@ -23,28 +24,35 @@ const ResetPassword = () => {
             name="email"
             placeholder="email@example.com"
             type="email"
-            ref={register}
+            ref={register({required: true})}
+
           />
+          {errors.email && errors.email.type === 'required' && (
+              <p className="alert alert-danger">Email is required!</p>
+          )}
         </div>
 
         <input type="submit" value="Reset password" />
+
+        <hr />
+        <section>
+          <h1> OR </h1>
+          Don&apos;t have an account ?
+          <Link
+              to="/register"
+              className="page-link"
+          >
+            Sign Up Here
+            {' '}
+          </Link>
+        </section>
       </form>
     </div>
   );
 };
 
-const LoginForm = ({ showResetForm }) => {
+const LoginForm = ({ showResetForm, handleLogin }) => {
   const { register, handleSubmit, errors } = useForm();
-
-  const handleLogin = (data) => {
-    const response = loginService(data);
-
-    login(response.data.email)
-    // TODO:: all a logout link
-
-    console.log(response.data.email);
-    // TODO ::response should return a user object as jwt from api
-  };
 
   return (
     <div className="login-form">
@@ -55,8 +63,11 @@ const LoginForm = ({ showResetForm }) => {
             name="email"
             placeholder="email@example.com"
             type="email"
-            ref={register}
+            ref={register({ required: true })}
           />
+          {errors.email && errors.email.type === 'required' && (
+          <p className="alert alert-danger">Email is required!</p>
+          )}
         </div>
         <div>
           <label htmlFor="password">Password</label>
@@ -64,11 +75,14 @@ const LoginForm = ({ showResetForm }) => {
             name="password"
             placeholder="password"
             type="password"
-            ref={register}
+            ref={register({ required: true })}
           />
+          {errors.password && errors.password.type === 'required' && (
+              <p className="alert alert-danger">Password is required!</p>
+          )}
         </div>
-        <div>
-          <label htmlFor="remember_me">Remember me</label>
+        <div className="remember_me">
+          <label id="remember_me" htmlFor="remember_me">Remember me</label>
           <input
             type="checkbox"
             name="remember_me"
@@ -78,9 +92,23 @@ const LoginForm = ({ showResetForm }) => {
         </div>
 
         <input type="submit" value="Login" />
+
+        <section className="reset-pw-link" onClick={showResetForm}><a>Forgot Password?</a></section>
+
+        <hr />
+        <section>
+          <h1> OR </h1>
+          Don&apos;t have an account ?
+          <Link
+              to="/register"
+              className="page-link"
+          >
+            Sign Up Here
+            {' '}
+          </Link>
+        </section>
       </form>
 
-      <section className="reset-pw-link" onClick={showResetForm}>Forgot Password?</section>
     </div>
   );
 };
@@ -92,23 +120,34 @@ const Login = () => {
     setView('reset_form');
   };
 
-  const FormView = () => (page === 'reset_form' ? <ResetPassword /> : <LoginForm showResetForm={showResetForm} />);
-  return (
-    <div>
+  const handleLogin = (data) => {
+    const response = loginService(data);
 
-      <section>
-        <FormView />
-        <hr />
-        <h1> OR </h1>
-        Don&apos;t have an account ?
-        <Link
-          to="/register"
-          className="page-link"
-        >
-          Sign Up Here
-          {' '}
-        </Link>
-      </section>
+    login(response.data.email);
+    // TODO:: all a logout link
+
+    // console.log(response.data.email);
+
+    // TODO:: force reload
+
+    // TODO ::response should return a user object as jwt from api
+    // redirect to user page
+    setView('user_page');
+  };
+
+  const FormView = () => {
+    if (page === 'reset_form') {
+      return <ResetPassword />;
+    } if (page === 'user_page') {
+      return <Redirect to="/user" />;
+    }
+
+    return <LoginForm showResetForm={showResetForm} handleLogin={handleLogin} />;
+  };// (page === 'reset_form' ? <ResetPassword /> ? page === 'user_page' ? <Redirect to='/home'/> : <LoginForm showResetForm={showResetForm} handleLogin={handleLogin} />);
+  return (
+    <div className="user-forms">
+      <FormView />
+
     </div>
   );
 };

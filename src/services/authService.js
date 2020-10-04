@@ -16,11 +16,6 @@ export function loginWithJwt(jwt) {
   localStorage.setItem(userTokenKey, jwt);
 }
 
-export function logout() {
-  localStorage.removeItem(userTokenKey);
-  localStorage.removeItem(tokenKey);
-}
-
 // Just the email
 export function getCurrentUser() {
   try {
@@ -40,6 +35,16 @@ export function getUserToken() {
   } catch (e) {
     return null;
   }
+}
+
+export function logout() {
+  localStorage.removeItem(userTokenKey);
+  localStorage.removeItem(tokenKey);
+
+  // check if successfully deleted from storage
+  const current = getCurrentUser();
+
+  if (!current) return true;
 }
 
 export default {

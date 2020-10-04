@@ -6,7 +6,7 @@ import { Button } from './Button';
 // import About from "About";
 // import Home from "Home";
 // import Produce from "Produce";
-function Navbar() {
+function Navbar({ currentUser }) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -28,6 +28,32 @@ function Navbar() {
   window.addEventListener('resize', showButton);
 
   window.addEventListener('resize', showButton);
+
+  const UserLinks = ({ user }) => {
+    // console.log(`Current user from nav bar:: ${user}`);
+    // TODO:: over ride signup with logout if user is set
+    if (!user) {
+      return (
+        <Link
+          to="/Produce"
+          className="nav-links-mobile"
+          onClick={closeMobileMenu}
+        >
+          signup
+        </Link>
+      );
+    }
+
+    return (
+      <Link
+        to="/logout"
+        className="nav-links-mobile"
+        onClick={closeMobileMenu}
+      >
+        logout
+      </Link>
+    );
+  };
 
   return (
     <>
@@ -86,7 +112,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+          { button && <Button buttonStyle="btn--outline">SIGN UP</Button> }
         </div>
       </nav>
     </>

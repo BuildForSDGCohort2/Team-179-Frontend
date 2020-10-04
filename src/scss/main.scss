@@ -1,6 +1,12 @@
 
 @import "variables";
-@import "~bootstrap/scss/bootstrap"; /** TODO.. drop bootstrap!*/
+@import "forms";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/alert"; /** TODO.. drop bootstrap!*/
+
+/*
 * {
   margin: 0;
   font-family: Radley, Questial, serif;
@@ -67,3 +73,5 @@ button {
   display: grid;
   justify-content: center;
 }
+
+*/
