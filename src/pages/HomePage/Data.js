@@ -9,7 +9,7 @@ export const homeObjOne = {
       'We use Data to inform Both farmers and Investors on what is most Profitable to them',
     description:
       "We give farmers and Investors tools to help them come up with the best grow plan that will maximize their resources and  ensure that each individual ends up profitable and food is provided for the masses",
-    buttonLabel: 'Get Started',
+    buttonLabel: 'Join Us',
     imgStart: '',
     image: require('../../images/agriinvest.2d1a5d4f.png'),
     alt: 'Agri-investy',

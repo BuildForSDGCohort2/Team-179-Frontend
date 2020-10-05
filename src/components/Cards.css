@@ -5,7 +5,6 @@
 
 h1 {
   text-align: center;
-  color: #6CD946;
 }
 
 .cards__container {
@@ -13,7 +12,7 @@ h1 {
   flex-flow: column;
   align-items: center;
   max-width: 1120px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -96,8 +95,7 @@ h1 {
 
 .cards__item__text {
   color: #252e48;
-  margin: 15px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
 }
 
