@@ -11,7 +11,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import { FormControl } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
 
-export default function ProfileUpdate() {
+const useStles = makeStyles({
+    root: {
+
+    },
+}),
+export default ProfileUpdate() {
     return (
         <div>
             <container fixed>
@@ -56,7 +61,6 @@ export default function ProfileUpdate() {
             label="Birthday"
             type="date"
             defaultValue="2017-05-24"
-            }}
             />
             <TextField 
             variant='outlined'

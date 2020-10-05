@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Register from "../components/forms/Register";
 import Login from "../components/forms/Login";
+import Proile from "../components/forms/ProfileUpdate";
+
 
 // separated user options from form because it contains complex login page logic
 // unrelated to the main purpose of the page
