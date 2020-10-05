@@ -1,0 +1,98 @@
+.user-forms {
+  //background: #1f98f4;
+  display: grid;
+  justify-content: center;
+
+  form {
+    min-height: 65vh;
+    padding: 2em;
+    margin: 2em;
+    text-align: center;
+    box-shadow: -6px 4px 21px -1px #d6ced6;
+
+    label {
+      display: none;
+    }
+
+    label#remember_me {
+      display: inline;
+      //background: rebeccapurple;
+      position: absolute;
+      left: 10%;
+    }
+
+    .remember_me {
+      margin-top: .5em;
+      margin-bottom: .5em;
+      padding-bottom: .5em;
+      padding-top: .5em;
+      //background: #1f98f4;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+
+      input[type=checkbox] {
+        //background: red;
+        position: absolute;
+        left: -45%;
+
+      }
+    }
+    input {
+      width: 85vw;
+      height: 53.94px;
+      font-size: 2em;
+      line-height: 1em;
+      padding: .2em;
+      margin: .2em;
+      border-radius: .005em;
+    }
+
+
+    input[type=submit] {
+      background-color: map-get($colors, pr_green);
+      color: map-get($colors, primary_white);
+      font-family: Questrial;
+
+
+      a {
+        color: map-get($colors, primary_white);
+        padding: 1em;
+        margin: auto;
+        font-size: 2.45em;
+        line-height: 1.5em;
+      }
+    }
+
+    section {
+      a {
+        margin-left: .5em;
+      }
+    }
+
+    .reset-pw-link {
+      cursor: pointer;
+      margin: 1em;
+
+      a {
+        padding: 1em;
+        color: #4e4df4;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 590px) {
+
+  .user-forms {
+    form {
+
+      input {
+        width: 484px;
+      }
+    }
+  }
+}

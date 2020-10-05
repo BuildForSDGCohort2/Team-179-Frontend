@@ -1,7 +1,15 @@
 
 @import "variables";
+
+@import "forms";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/alert"; /** TODO.. drop bootstrap!*/
+
 @import "fresh_api";
 //@import "~bootstrap/scss/bootstrap"; /** TODO.. drop bootstrap!*/
+
 
 /*
 * {
@@ -64,6 +72,7 @@
   display: grid;
   justify-content: center;
 }
+
 
 .adm-reports {
 
