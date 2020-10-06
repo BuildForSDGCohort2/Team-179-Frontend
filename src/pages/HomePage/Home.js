@@ -1,6 +1,8 @@
 import React from 'react';
+import { Grommet } from 'grommet';
 import { homeObjOne } from './Data';
 import { InfoSection} from '../../components';
+import {Authentication} from '../../components';
 import Cards from '../../components/Cards';
 import '../../App.css';
 import HeroSection from '../../components/HeroSection'
@@ -8,11 +10,12 @@ import HeroSection from '../../components/HeroSection'
 
 function Home () {
     return (
-        < >
+        <Grommet plain >
         <HeroSection />
         <InfoSection {...homeObjOne} />
         <Cards />
-        </>
+        <Authentication />
+        </Grommet>
     )
 }
 // class Home extends Component {

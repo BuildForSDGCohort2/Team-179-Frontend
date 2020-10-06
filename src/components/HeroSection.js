@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
-import { Button } from './Button';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -9,11 +11,11 @@ function HeroSection() {
         <image src="" alt='Farmer In the Farm'/>
         <h1 className='hero-text'> Be Part Of The Food Security Revolution</h1>
         <div className="hero-btns">
-        <Button className='btns'
-        buttonStyle='btn--outline'
-        buttonSize='btn--large'>
+        <Link to='/user'>
+        <Button  size="large" variant="contained" color="primary">
         Join US
         </Button>
+        </Link>
         </div>
         </div>
     )
