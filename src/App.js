@@ -16,6 +16,7 @@ import Register from './pages/Register';
 import { getCurrentUser } from './services/authService';
 import Logout from './pages/Logout';
 import Farmcreate from './pages/Farmcreate';
+import Project from './pages/Project';
 function App() {
   const [currentUser, setCurrentUser] = useState([]);
 
@@ -55,6 +56,7 @@ function App() {
           <Route path="/register" exact component={Register} />
           <Route path="/logout" exact component={Logout} />
           <Route path="/farmcreate" exact component={Farmcreate} />
+          <Route path="/Project" exact component={Project} />
           <Redirect from="/" exact to="home" />
         </Switch>
       </Router>
