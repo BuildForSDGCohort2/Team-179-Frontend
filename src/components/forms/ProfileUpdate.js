@@ -39,6 +39,7 @@ function ProfileUpdate() {
         }
     return (
         <div>
+        <CssBaseline />
             <container fixed>
             <Typography variant="h1">
             Lets Learn More About You
