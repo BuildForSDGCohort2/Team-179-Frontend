@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
             margin: theme.spacing(3),
             width: '25ch',
         },
+      },
     container: {
             display: 'flex',
             flexWrap: 'wrap',
