@@ -11,7 +11,7 @@ function HeroSection() {
         <image src="" alt='Farmer In the Farm'/>
         <h1 className='hero-text'> Be Part Of The Food Security Revolution</h1>
         <div className="hero-btns">
-        <Link to='/user'>
+        <Link to='/Register'>
         <Button  size="large" variant="contained" color="primary">
         Join US
         </Button>

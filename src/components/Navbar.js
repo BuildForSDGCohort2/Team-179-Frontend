@@ -77,7 +77,7 @@ function Navbar({ currentUser }) {
             </li>
             <li className="nav-item">
               <Link
-                to="/user"
+                to="/Register"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
@@ -104,7 +104,7 @@ function Navbar({ currentUser }) {
             </li>
             <li>
               <Link
-                to="/Produce"
+                to="/Register"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
