@@ -10,10 +10,10 @@ import AddIcon from '@material-ui/icons/Add';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Container from '@material-ui/core/Container';
 
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
+const useStyles = makeStyles((theme) => ({
         formControl: {
             margin: theme.spacing(1),
             minWidth: 120,
@@ -21,8 +21,20 @@ const useStyles = makeStyles((theme: Theme) =>
         selectEmpty: {
             marginTop: theme.spacing(2),
         },
-    }),
-);
+        paper: {
+            marginTop: theme.spacing(8),
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+        },
+        form: {
+            width: '100%', // Fix IE 11 issue.
+            marginTop: theme.spacing(3),
+        },
+        submit: {
+            margin: theme.spacing(3, 0, 2),
+        },
+    }));
 
 function ProfileUpdate() {
         const classes = useStyles();
@@ -37,12 +49,13 @@ function ProfileUpdate() {
             })
         }
     return (
-        <div>
+        <Container component="main" maxWidth="xs">
         <CssBaseline />
-            <container fixed>
+            <div className={classes.paper}>
             <Typography variant="h1">
             Lets Learn More About You
             </Typography>
+            <form className={classes.form} noValidate>
             <FormControl className={classes.FormControl}>
             <InputLabel >Roles</InputLabel>
             <Select
@@ -104,9 +117,9 @@ function ProfileUpdate() {
             label='Kra Pin'
             />
             </FormControl>
-            
-            </container>
-        </div>
+            </form>
+            </div>
+        </Container>
     )
 }
 
