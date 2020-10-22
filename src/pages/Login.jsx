@@ -1,155 +1,122 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Link, Redirect } from 'react-router-dom';
-import { loginService, resetPassword } from '../services/formSubmissions';
-import { login } from '../services/authService';
+import React from 'react';
+import { createMuiTheme, makeStyles, createStyles, ThemeProvider } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import Link from '@material-ui/core/Link';
+import Container from '@material-ui/core/Container';
+import Input from '@material-ui/core/Input';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import IconButton from '@material-ui/core/IconButton';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import { green } from '@material-ui/core/colors';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
-const ResetPassword = () => {
-  const { register, handleSubmit, errors } = useForm();
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+},
+selectEmpty: {
+    marginTop: theme.spacing(2),
+},
+paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+},
+form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(3),
+},
+submit: {
+    margin: theme.spacing(3, 0, 2),
+    color: '#fff',
+},
+textField: {
+  width: '45ch',
+}
+}));
 
-  const handlePwReset = (data) => {
-    const response = resetPassword(data);
+const theme = createMuiTheme({
+  palette: {
+    primary: green,
+  },
+});
 
-    console.log(response);
-  };
-
-  // TODO:: remove repeated
+export default function Login() {
+  const classes = useStyles();
   return (
-    <div className="reset-password-form">
-
-      <form onSubmit={handleSubmit(handlePwReset)}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            name="email"
-            placeholder="email@example.com"
-            type="email"
-            ref={register({required: true})}
-
+    <Container component="main" maxWidth="xs">
+    <CssBaseline />
+    <div className={classes.paper}>
+    <Typography component="h1" variant="h5">
+    <form className="classes.form" noValidate>
+    <Grid container spacing={2}>
+    <Grid item xs={12}>
+        <TextField
+                name="Email"
+                variant="outlined"
+                required
+                fullWidth
+                id="Email"
+                label="Email"
+                autoComplete="email"
+              />
+        </Grid>
+        <Grid item xs={12}>
+        <TextField
+                name="Password"
+                variant="outlined"
+                required
+                fullWidth
+                id="Passsword"
+                label="Password"
+                autoComplete="password"
+              />
+        </Grid>
+        <FormControlLabel
+            control={<Checkbox value="remember" color="primary" />}
+            label="Remember me"
           />
-          {errors.email && errors.email.type === 'required' && (
-              <p className="alert alert-danger">Email is required!</p>
-          )}
-        </div>
-
-        <input type="submit" value="Reset password" />
-
-        <hr />
-        <section>
-          <h1> OR </h1>
-          Don&apos;t have an account ?
-          <Link
-              to="/register"
-              className="page-link"
+    </Grid>
+    <ThemeProvider theme={theme}>
+        <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
           >
-            Sign Up Here
-            {' '}
-          </Link>
-        </section>
-      </form>
+            Sign Up
+          </Button>
+          </ThemeProvider>
+          <Grid container>
+            <Grid item xs>
+              <Link href="#" variant="body2">
+                Forgot password?
+              </Link>
+            </Grid>
+            <Grid item>
+              <Link href="#" variant="body2">
+                {"Don't have an account? Sign Up"}
+              </Link>
+            </Grid>
+          </Grid>
+    </form>
+    </Typography>
     </div>
-  );
-};
-
-const LoginForm = ({ showResetForm, handleLogin }) => {
-  const { register, handleSubmit, errors } = useForm();
-
-  return (
-    <div className="login-form">
-      <form onSubmit={handleSubmit(handleLogin)}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            name="email"
-            placeholder="email@example.com"
-            type="email"
-            ref={register({ required: true })}
-          />
-          {errors.email && errors.email.type === 'required' && (
-          <p className="alert alert-danger">Email is required!</p>
-          )}
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            name="password"
-            placeholder="password"
-            type="password"
-            ref={register({ required: true })}
-          />
-          {errors.password && errors.password.type === 'required' && (
-              <p className="alert alert-danger">Password is required!</p>
-          )}
-        </div>
-        <div className="remember_me">
-          <label id="remember_me" htmlFor="remember_me">Remember me</label>
-          <input
-            type="checkbox"
-            name="remember_me"
-            value
-            ref={register}
-          />
-        </div>
-
-        <input type="submit" value="Login" />
-
-        <section className="reset-pw-link" onClick={showResetForm}><a>Forgot Password?</a></section>
-
-        <hr />
-        <section>
-          <h1> OR </h1>
-          Don&apos;t have an account ?
-          <Link
-              to="/register"
-              className="page-link"
-          >
-            Sign Up Here
-            {' '}
-          </Link>
-        </section>
-      </form>
-
-    </div>
-  );
-};
-
-const Login = () => {
-  const [page, setView] = useState('');
-
-  const showResetForm = () => {
-    setView('reset_form');
-  };
-
-  const handleLogin = (data) => {
-    const response = loginService(data);
-
-    login(response.data.email);
-    // TODO:: all a logout link
-
-    // console.log(response.data.email);
-
-    // TODO:: force reload
-
-    // TODO ::response should return a user object as jwt from api
-    // redirect to user page
-    setView('user_page');
-  };
-
-  const FormView = () => {
-    if (page === 'reset_form') {
-      return <ResetPassword />;
-    } if (page === 'user_page') {
-      return <Redirect to="/user" />;
-    }
-
-    return <LoginForm showResetForm={showResetForm} handleLogin={handleLogin} />;
-  };// (page === 'reset_form' ? <ResetPassword /> ? page === 'user_page' ? <Redirect to='/home'/> : <LoginForm showResetForm={showResetForm} handleLogin={handleLogin} />);
-  return (
-    <div className="user-forms">
-      <FormView />
-
-    </div>
-  );
-};
-
-export default Login;
+    </Container>
+  )
+}
